@@ -5,7 +5,7 @@ import { streamText } from "ai";
 export const maxDuration = 30;
 
 // Used fine-tune gpt-3.5 model
-const customModel = "ft:gpt-3.5-turbo-0125:personal::9tDaRgs3"
+const customModel = openai("ft:gpt-3.5-turbo-0125:personal::9tDaRgs3");
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
