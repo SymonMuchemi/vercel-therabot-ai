@@ -6,6 +6,7 @@ export const maxDuration = 30;
 
 // Used fine-tune gpt-3.5 model
 const customModel = openai("ft:gpt-3.5-turbo-0125:personal::9tDaRgs3");
+const gpt4Model = openai('gpt-4-turbo');
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
@@ -31,7 +32,7 @@ export async function POST(req: Request) {
         Remember: You are an informational resource, not a substitute for professional mental health care. Always encourage users to seek professional help for specific concerns or in crisis situations.`,
   };
   const result = await streamText({
-    model: customModel,
+    model: gpt4Model,
     messages: messages.concat(initialMessage),
   });
 
