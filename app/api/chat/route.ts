@@ -4,6 +4,8 @@ import { streamText } from "ai";
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
+const customModel = "ft:gpt-3.5-turbo-0125:personal::9tDaRgs3"
+
 export async function POST(req: Request) {
   const { messages } = await req.json();
   const initialMessage = {
@@ -28,7 +30,7 @@ export async function POST(req: Request) {
         Remember: You are an informational resource, not a substitute for professional mental health care. Always encourage users to seek professional help for specific concerns or in crisis situations.`,
   };
   const result = await streamText({
-    model: openai("gpt-4-turbo"),
+    model: customModel,
     messages: messages.concat(initialMessage),
   });
 
