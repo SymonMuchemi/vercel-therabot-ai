@@ -4,6 +4,7 @@ import { streamText } from "ai";
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
+// Used fine-tune gpt-3.5 model
 const customModel = "ft:gpt-3.5-turbo-0125:personal::9tDaRgs3"
 
 export async function POST(req: Request) {
