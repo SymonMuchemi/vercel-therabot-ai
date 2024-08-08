@@ -58,7 +58,7 @@ export default function Chat() {
         </p>
       </div>
 
-      <div className="flex-1 overflow-y-auto mb-4 mt-4 px-4">
+      <div className="flex-1 overflow-y-auto mb-4 mt-[5rem] px-4">
         {messages.map((m) => (
           <div
             key={m.id}
