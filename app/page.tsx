@@ -50,15 +50,13 @@ export default function Chat() {
   };
   return (
     <div className="flex flex-col w-full max-w-2xl py-24 mx-auto mt-[15px] stretch relative">
-      {showWelcome && (
-        <div className="absolute top-0 left-0 right-0 p-4 bg-green-100 text-green-800 rounded-lg shadow-md mb-4 z-10">
-          <p className="text-center">
-            Welcome to TheraBot, I am your AI powered Psychotherapist. This
-            conversation is not stored, refreshing the page will delete the
-            conversation.
-          </p>
-        </div>
-      )}
+      <div className="absolute top-0 left-0 right-0 p-4 bg-green-100 text-green-800 rounded-lg shadow-md mb-4 z-10">
+        <p className="text-center">
+          Welcome to TheraBot, I am your AI powered Psychotherapist. This
+          conversation is not stored, refreshing the page will delete the
+          conversation.
+        </p>
+      </div>
 
       <div className="flex-1 overflow-y-auto mb-4 px-4">
         {messages.map((m) => (
